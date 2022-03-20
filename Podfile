@@ -6,7 +6,7 @@ target 'MvvmRxApp' do
   use_frameworks!
 
   # Pods for MvvmRxApp
-    pod 'Alamofire'
+    pod 'Alamofire' ,'~> 4.9.1'
     pod 'PKHUD'
     pod 'RxSwift'
     pod 'RxDataSources'
