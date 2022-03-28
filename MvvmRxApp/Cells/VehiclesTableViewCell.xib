@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VehiclesTableViewCell" rowHeight="94" id="KGk-i7-Jjw" customClass="VehiclesTableViewCell" customModule="MvvmRxApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CelBg" translatesAutoresizingMaskIntoConstraints="NO" id="i0b-EK-DwK">
+                        <rect key="frame" x="9.5" y="4.5" width="355" height="85"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xEy-JB-z1W">
+                        <rect key="frame" x="29.5" y="12" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="95L-hz-rMZ"/>
+                            <constraint firstAttribute="width" constant="70" id="BJ1-Jm-9wO"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VRl-GR-ybu">
+                        <rect key="frame" x="119.5" y="17.5" width="245" height="59"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD1-ty-fEX">
+                                <rect key="frame" x="0.0" y="0.0" width="245" height="16.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="No2-a7-qsN">
+                                <rect key="frame" x="0.0" y="21.5" width="245" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.56470588239999997" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-bU-gwT">
+                                <rect key="frame" x="0.0" y="42.5" width="245" height="16.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="i0b-EK-DwK" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="3OO-Tk-lJj"/>
+                    <constraint firstItem="i0b-EK-DwK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6DN-hY-nJk"/>
+                    <constraint firstItem="VRl-GR-ybu" firstAttribute="leading" secondItem="xEy-JB-z1W" secondAttribute="trailing" constant="20" id="KsP-Yp-ulU"/>
+                    <constraint firstItem="xEy-JB-z1W" firstAttribute="leading" secondItem="i0b-EK-DwK" secondAttribute="leading" constant="20" id="Mgb-Xt-QD3"/>
+                    <constraint firstItem="xEy-JB-z1W" firstAttribute="centerY" secondItem="i0b-EK-DwK" secondAttribute="centerY" id="WKU-UF-iha"/>
+                    <constraint firstItem="i0b-EK-DwK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.95" id="WW0-iz-wwl"/>
+                    <constraint firstItem="i0b-EK-DwK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ajf-PH-6FF"/>
+                    <constraint firstItem="VRl-GR-ybu" firstAttribute="height" secondItem="i0b-EK-DwK" secondAttribute="height" multiplier="0.7" id="gOy-30-IoF"/>
+                    <constraint firstItem="VRl-GR-ybu" firstAttribute="trailing" secondItem="i0b-EK-DwK" secondAttribute="trailing" id="lVl-hz-EIi"/>
+                    <constraint firstItem="VRl-GR-ybu" firstAttribute="centerY" secondItem="i0b-EK-DwK" secondAttribute="centerY" id="sgv-Eb-42B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="headingLbl" destination="GZ5-bU-gwT" id="KB4-Zx-Rvf"/>
+                <outlet property="stateLbl" destination="No2-a7-qsN" id="ukp-vr-vaR"/>
+                <outlet property="typeLbl" destination="FD1-ty-fEX" id="Au1-e4-khf"/>
+            </connections>
+            <point key="canvasLocation" x="171.01449275362319" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="CelBg" width="979" height="341"/>
+        <image name="carIcon" width="512" height="512"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

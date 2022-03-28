@@ -1,23 +1,16 @@
 //
-//  VehiclesTableViewViewModel.swift
+//  MapViewModel.swift
 //  MvvmRxApp
 //
-//  Created by MacBook Pro on 20/3/2022.
+//  Created by MacBook Pro on 22/3/2022.
 //
 
+import Foundation
 import RxSwift
 import RxCocoa
 
-enum VehiclesTableViewCellType {
-    case normal(cellViewModel: VehiclesCellViewModel)
-    case error(message: String)
-    case empty
-}
-
-class VehiclesTableViewViewModel {
-    var vehicleCells: Observable<[VehiclesTableViewCellType]> {
-        return cells.asObservable()
-    }
+class MapViewModel{
+  
     var onShowLoadingHud: Observable<Bool> {
         return loadInProgress
             .asObservable()
@@ -29,7 +22,6 @@ class VehiclesTableViewViewModel {
     let disposeBag = DisposeBag()
 
     private let loadInProgress = BehaviorRelay(value: false)
-    private let cells = BehaviorRelay<[VehiclesTableViewCellType]>(value: [])
 
     init(appServerClient: AppServerClient = AppServerClient()) {
         self.appServerClient = appServerClient
@@ -44,19 +36,16 @@ class VehiclesTableViewViewModel {
                 onNext: { [weak self] vehicles in
                     self?.loadInProgress.accept(false)
                     guard vehicles.poiList!.count > 0 else {
-                        self?.cells.accept([.empty])
+                       // self?.cells.accept([.empty])
                         return
                     }
 
-                    self?.cells.accept((vehicles.poiList?.compactMap { .normal(cellViewModel: VehiclesCellViewModel(vehicle: $0 )) })!)
+                    
                 },
                 onError: { [weak self] error in
                     self?.loadInProgress.accept(false)
-                    self?.cells.accept([
-                        .error(
-                            message: (error as? AppServerClient.GetFailureReason)?.getErrorMessage() ?? "Loading failed, check network connection"
-                        )
-                    ])
+            
+                   
                 }
             )
             .disposed(by: disposeBag)
@@ -76,6 +65,3 @@ fileprivate extension AppServerClient.GetFailureReason {
         }
     }
 }
-
-
-

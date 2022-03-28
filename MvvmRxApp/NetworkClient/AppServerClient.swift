@@ -17,9 +17,9 @@ class AppServerClient {
         case notFound = 404
     }
 
-    func getVehicles() -> Observable<[PoiList]> {
+    func getVehicles(p1Lat:Double,p1Long:Double,p2Lat:Double,p2Long:Double) -> Observable<VehicleList> {
         return Observable.create { observer -> Disposable in
-            Alamofire.request("https://poi-api.mytaxi.com/PoiService/poi/v1?p2Lat=53.394655&p1Lon=9.757589&p1Lat=53.694865&p2Lon=10.099891")
+            Alamofire.request("https://poi-api.mytaxi.com/PoiService/poi/v1?p2Lat=\(p2Lat)&p1Lon=\(p1Long)&p1Lat=\(p1Lat)&p2Lon=\(p2Long)")
                 .validate()
                 .responseJSON { response in
                     switch response.result {
@@ -31,7 +31,7 @@ class AppServerClient {
                             return
                         }
                         do {
-                            let vehicles = try JSONDecoder().decode([PoiList].self, from: data)
+                            let vehicles = try JSONDecoder().decode(VehicleList.self, from: data)
                             observer.onNext(vehicles)
                         } catch {
                             observer.onError(error)

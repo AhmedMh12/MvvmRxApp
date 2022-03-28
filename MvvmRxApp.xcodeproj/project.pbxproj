@@ -52,6 +52,25 @@
 		FA986C4E27E754BC004E1BEB /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C4D27E754BC004E1BEB /* AppServerClient.swift */; };
 		FA986C4F27E754BC004E1BEB /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C4D27E754BC004E1BEB /* AppServerClient.swift */; };
 		FA986C5027E754BC004E1BEB /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C4D27E754BC004E1BEB /* AppServerClient.swift */; };
+		FA986C7D27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C7C27E9E380004E1BEB /* VehiclesTableViewController.swift */; };
+		FA986C7E27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C7C27E9E380004E1BEB /* VehiclesTableViewController.swift */; };
+		FA986C7F27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C7C27E9E380004E1BEB /* VehiclesTableViewController.swift */; };
+		FA986C8327E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8127E9E464004E1BEB /* VehiclesTableViewCell.swift */; };
+		FA986C8427E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8127E9E464004E1BEB /* VehiclesTableViewCell.swift */; };
+		FA986C8527E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8127E9E464004E1BEB /* VehiclesTableViewCell.swift */; };
+		FA986C8627E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */; };
+		FA986C8727E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */; };
+		FA986C8827E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */; };
+		FA986C8A27EA0EFC004E1BEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8927EA0EFC004E1BEB /* MapViewController.swift */; };
+		FA986C8B27EA0EFC004E1BEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8927EA0EFC004E1BEB /* MapViewController.swift */; };
+		FA986C8C27EA0EFC004E1BEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C8927EA0EFC004E1BEB /* MapViewController.swift */; };
+		FA986C9227EA1580004E1BEB /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9127EA1580004E1BEB /* MapViewModel.swift */; };
+		FA986C9327EA1580004E1BEB /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9127EA1580004E1BEB /* MapViewModel.swift */; };
+		FA986C9427EA1580004E1BEB /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9127EA1580004E1BEB /* MapViewModel.swift */; };
+		FA986C9627EA2506004E1BEB /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9527EA2506004E1BEB /* MyAnnotation.swift */; };
+		FA986C9727EA2506004E1BEB /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9527EA2506004E1BEB /* MyAnnotation.swift */; };
+		FA986C9827EA2506004E1BEB /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9527EA2506004E1BEB /* MyAnnotation.swift */; };
+		FA9B30B127F1D75300B7BF45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30B027F1D75300B7BF45 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +124,13 @@
 		FA986C3927E7529D004E1BEB /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FA986C3A27E7529E004E1BEB /* ReadOnce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadOnce.swift; sourceTree = "<group>"; };
 		FA986C4D27E754BC004E1BEB /* AppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerClient.swift; sourceTree = "<group>"; };
+		FA986C7C27E9E380004E1BEB /* VehiclesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTableViewController.swift; sourceTree = "<group>"; };
+		FA986C8127E9E464004E1BEB /* VehiclesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTableViewCell.swift; sourceTree = "<group>"; };
+		FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehiclesTableViewCell.xib; sourceTree = "<group>"; };
+		FA986C8927EA0EFC004E1BEB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FA986C9127EA1580004E1BEB /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		FA986C9527EA2506004E1BEB /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
+		FA9B30B027F1D75300B7BF45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +213,8 @@
 				FA986C4B27E75400004E1BEB /* Helpers */,
 				FA986C4A27E753C5004E1BEB /* Extensions */,
 				FA986B8227E48DCA004E1BEB /* Models */,
+				FA986C8027E9E448004E1BEB /* Cells */,
+				FA986C7B27E9D357004E1BEB /* ViewContollers */,
 				FA986B8F27E74F46004E1BEB /* ViewModels */,
 				FA91A02E27DB603D00438B9B /* AppDelegate.swift */,
 				FA91A03227DB603D00438B9B /* ViewController.swift */,
@@ -231,6 +259,7 @@
 			children = (
 				FA986B9027E74FAA004E1BEB /* VehiclesCellViewModel.swift */,
 				FA986B9427E7513E004E1BEB /* VehiclesTableViewViewModel.swift */,
+				FA986C9127EA1580004E1BEB /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				FA986C3627E7529D004E1BEB /* UIViewControllerExtension.swift */,
+				FA9B30B027F1D75300B7BF45 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +290,25 @@
 				FA986C4D27E754BC004E1BEB /* AppServerClient.swift */,
 			);
 			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		FA986C7B27E9D357004E1BEB /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				FA986C7C27E9E380004E1BEB /* VehiclesTableViewController.swift */,
+				FA986C8927EA0EFC004E1BEB /* MapViewController.swift */,
+				FA986C9527EA2506004E1BEB /* MyAnnotation.swift */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		FA986C8027E9E448004E1BEB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA986C8127E9E464004E1BEB /* VehiclesTableViewCell.swift */,
+				FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA986C8627E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */,
 				FA91A03E27DB604000438B9B /* LaunchScreen.storyboard in Resources */,
 				FA91A03B27DB604000438B9B /* Assets.xcassets in Resources */,
 				FA91A03627DB603D00438B9B /* Main.storyboard in Resources */,
@@ -382,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA986C8727E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA986C8827E9E464004E1BEB /* VehiclesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,15 +576,21 @@
 				FA986B8827E48E15004E1BEB /* PoiList.swift in Sources */,
 				FA986C3B27E7529E004E1BEB /* UIViewControllerExtension.swift in Sources */,
 				FA986B9527E7513E004E1BEB /* VehiclesTableViewViewModel.swift in Sources */,
+				FA986C7D27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */,
 				FA986C4727E7529E004E1BEB /* ReadOnce.swift in Sources */,
 				FA91A03327DB603D00438B9B /* ViewController.swift in Sources */,
 				FA986C4427E7529E004E1BEB /* Alert.swift in Sources */,
 				FA91A02F27DB603D00438B9B /* AppDelegate.swift in Sources */,
 				FA986C4E27E754BC004E1BEB /* AppServerClient.swift in Sources */,
 				FA91A03927DB603D00438B9B /* MvvmRxApp.xcdatamodeld in Sources */,
+				FA986C8327E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */,
 				FA986B9127E74FAA004E1BEB /* VehiclesCellViewModel.swift in Sources */,
 				FA986B8C27E48E37004E1BEB /* Coordinate.swift in Sources */,
+				FA9B30B127F1D75300B7BF45 /* Extensions.swift in Sources */,
+				FA986C9627EA2506004E1BEB /* MyAnnotation.swift in Sources */,
 				FA986C4127E7529E004E1BEB /* Result.swift in Sources */,
+				FA986C8A27EA0EFC004E1BEB /* MapViewController.swift in Sources */,
+				FA986C9227EA1580004E1BEB /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,17 +598,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA986C8427E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */,
 				FA986C4227E7529E004E1BEB /* Result.swift in Sources */,
 				FA986B9627E7513E004E1BEB /* VehiclesTableViewViewModel.swift in Sources */,
 				FA986B8527E48DEB004E1BEB /* VehicleList.swift in Sources */,
 				FA91A04927DB604100438B9B /* MvvmRxAppTests.swift in Sources */,
+				FA986C7E27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */,
 				FA986B9227E74FAA004E1BEB /* VehiclesCellViewModel.swift in Sources */,
+				FA986C9327EA1580004E1BEB /* MapViewModel.swift in Sources */,
 				FA986B8927E48E15004E1BEB /* PoiList.swift in Sources */,
 				FA986C3C27E7529E004E1BEB /* UIViewControllerExtension.swift in Sources */,
+				FA986C9727EA2506004E1BEB /* MyAnnotation.swift in Sources */,
 				FA986B8D27E48E37004E1BEB /* Coordinate.swift in Sources */,
 				FA986C4527E7529E004E1BEB /* Alert.swift in Sources */,
 				FA986C4827E7529E004E1BEB /* ReadOnce.swift in Sources */,
 				FA986C3F27E7529E004E1BEB /* JSON.swift in Sources */,
+				FA986C8B27EA0EFC004E1BEB /* MapViewController.swift in Sources */,
 				FA986C4F27E754BC004E1BEB /* AppServerClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,8 +624,10 @@
 			files = (
 				FA986B8A27E48E15004E1BEB /* PoiList.swift in Sources */,
 				FA986B8627E48DEB004E1BEB /* VehicleList.swift in Sources */,
+				FA986C9827EA2506004E1BEB /* MyAnnotation.swift in Sources */,
 				FA91A05527DB604100438B9B /* MvvmRxAppUITestsLaunchTests.swift in Sources */,
 				FA986C4027E7529E004E1BEB /* JSON.swift in Sources */,
+				FA986C8527E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */,
 				FA986B9327E74FAA004E1BEB /* VehiclesCellViewModel.swift in Sources */,
 				FA986C3D27E7529E004E1BEB /* UIViewControllerExtension.swift in Sources */,
 				FA986C4927E7529E004E1BEB /* ReadOnce.swift in Sources */,
@@ -571,7 +636,10 @@
 				FA986B9727E7513E004E1BEB /* VehiclesTableViewViewModel.swift in Sources */,
 				FA986C4627E7529E004E1BEB /* Alert.swift in Sources */,
 				FA91A05327DB604100438B9B /* MvvmRxAppUITests.swift in Sources */,
+				FA986C9427EA1580004E1BEB /* MapViewModel.swift in Sources */,
+				FA986C7F27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */,
 				FA986B8E27E48E37004E1BEB /* Coordinate.swift in Sources */,
+				FA986C8C27EA0EFC004E1BEB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

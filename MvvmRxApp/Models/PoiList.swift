@@ -17,7 +17,7 @@ struct PoiList : Codable {
 
 
     enum CodingKeys: String, CodingKey {
-        case coordinate
+        case coordinate = "coordinate"
         case heading = "heading"
         case id = "id"
         case state = "state"
@@ -25,7 +25,7 @@ struct PoiList : Codable {
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        coordinate = try Coordinate(from: decoder)
+        coordinate = try values.decodeIfPresent(Coordinate.self, forKey: .coordinate)
         heading = try values.decodeIfPresent(Float.self, forKey: .heading)
         id = try values.decodeIfPresent(Int.self, forKey: .id)
         state = try values.decodeIfPresent(String.self, forKey: .state)

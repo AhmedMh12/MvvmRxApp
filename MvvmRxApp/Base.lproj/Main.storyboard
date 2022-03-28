@@ -4,24 +4,77 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List vehicles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MvvmRxApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VehiclesTableViewController" customModule="MvvmRxApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of available vehicles : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXd-NB-yYD">
+                                <rect key="frame" x="20" y="108" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ikq-KQ-b8c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-1a-wW4">
+                                <rect key="frame" x="0.0" y="147" width="414" height="636"/>
+                                <color key="backgroundColor" white="0.96268105020328443" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.9607718331473214" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FXd-NB-yYD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1bJ-mR-2EX"/>
+                            <constraint firstItem="g0C-1a-wW4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Kie-Uk-n40"/>
+                            <constraint firstItem="g0C-1a-wW4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="dC6-iH-ZbG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g0C-1a-wW4" secondAttribute="bottom" constant="30" id="gYY-kH-QZq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FXd-NB-yYD" secondAttribute="trailing" constant="20" id="hal-0F-xCn"/>
+                            <constraint firstItem="g0C-1a-wW4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i9D-xC-qsH"/>
+                            <constraint firstItem="FXd-NB-yYD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zdB-cD-j4Q"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="List vehicles" image="list.bullet.circle" catalog="system" selectedImage="list.bullet.circle" id="3BF-fo-QAW">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="vTw-U6-Rgb"/>
+                    <connections>
+                        <outlet property="tableView" destination="g0C-1a-wW4" id="s4B-TZ-eCN"/>
+                        <segue destination="aM6-mL-XR4" kind="push" identifier="vehicleDetails" id="cHB-t5-Vgl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="54"/>
+            <point key="canvasLocation" x="719" y="648"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GN6-YJ-8cr">
+            <objects>
+                <tabBarController id="EUr-DV-PLe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MwL-ac-9r8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ktg-6J-qYh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="a6J-5i-f20"/>
+                        <segue destination="aM6-mL-XR4" kind="relationship" relationship="viewControllers" id="dcv-xM-uxM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEc-Le-nAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="-118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bAZ-Ui-SAZ">
@@ -32,12 +85,61 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CE3-ca-NJY"/>
+                        <segue destination="EUr-DV-PLe" kind="relationship" relationship="rootViewController" id="8Xj-sH-H26"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nl-hA-8Zb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1304" y="84"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="dvx-0d-MbZ">
+            <objects>
+                <viewController id="aM6-mL-XR4" customClass="MapViewController" customModule="MvvmRxApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pPn-4Y-7ri">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9su-4Z-Rul">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aM6-mL-XR4" id="NyH-ez-mDC"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GG4-kp-7ah"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9su-4Z-Rul" firstAttribute="centerX" secondItem="pPn-4Y-7ri" secondAttribute="centerX" id="W8M-of-Dg5"/>
+                            <constraint firstItem="9su-4Z-Rul" firstAttribute="width" secondItem="pPn-4Y-7ri" secondAttribute="width" id="hip-TK-kHr"/>
+                            <constraint firstItem="9su-4Z-Rul" firstAttribute="top" secondItem="pPn-4Y-7ri" secondAttribute="top" id="jOB-9f-HqU"/>
+                            <constraint firstItem="9su-4Z-Rul" firstAttribute="height" secondItem="pPn-4Y-7ri" secondAttribute="height" id="pEm-hj-ihs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" selectedImage="mappin.and.ellipse" id="Jfy-ft-PhJ">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Map" id="Wv4-6L-9Kr"/>
+                    <connections>
+                        <outlet property="mapView" destination="9su-4Z-Rul" id="eIX-YQ-W27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ql5-vN-k3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="-343"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cHB-t5-Vgl"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="list.bullet.circle" catalog="system" width="128" height="121"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
