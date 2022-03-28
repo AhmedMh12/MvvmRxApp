@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 
 class MapViewModel{
-  
+    let getVehicleResponse : PublishSubject<VehicleList> = PublishSubject()
+
     var onShowLoadingHud: Observable<Bool> {
         return loadInProgress
             .asObservable()
@@ -35,12 +36,7 @@ class MapViewModel{
             .subscribe(
                 onNext: { [weak self] vehicles in
                     self?.loadInProgress.accept(false)
-                    guard vehicles.poiList!.count > 0 else {
-                       // self?.cells.accept([.empty])
-                        return
-                    }
-
-                    
+                    self?.getVehicleResponse.onNext(vehicles)
                 },
                 onError: { [weak self] error in
                     self?.loadInProgress.accept(false)

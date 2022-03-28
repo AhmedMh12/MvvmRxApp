@@ -19,6 +19,7 @@ class AppServerClient {
 
     func getVehicles(p1Lat:Double,p1Long:Double,p2Lat:Double,p2Long:Double) -> Observable<VehicleList> {
         return Observable.create { observer -> Disposable in
+            print("url ==> https://poi-api.mytaxi.com/PoiService/poi/v1?p2Lat=\(p2Lat)&p1Lon=\(p1Long)&p1Lat=\(p1Lat)&p2Lon=\(p2Long)")
             Alamofire.request("https://poi-api.mytaxi.com/PoiService/poi/v1?p2Lat=\(p2Lat)&p1Lon=\(p1Long)&p1Lat=\(p1Lat)&p2Lon=\(p2Long)")
                 .validate()
                 .responseJSON { response in

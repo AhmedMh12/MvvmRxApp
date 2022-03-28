@@ -16,7 +16,8 @@ public class MapViewController: UIViewController , MKMapViewDelegate {
     @IBOutlet private var mapView: MKMapView?
     // Set initial location in Honolulu
     let initialLocation = CLLocation(latitude: 53.694865, longitude: 9.757589)
-    var viewModel: MapViewModel?
+ 
+    let viewModel: MapViewModel = MapViewModel()
     private var mapChangedFromUserInteraction = false
 
     private func mapViewRegionDidChangeFromUserInteraction() -> Bool {
@@ -31,35 +32,46 @@ public class MapViewController: UIViewController , MKMapViewDelegate {
         }
         return false
     }
+     var getVehicleResponse = PublishSubject<VehicleList>()
+    private let disposeBag = DisposeBag()
     public override func viewDidLoad() {
         super.viewDidLoad()
         initView()
        
-      
+        createCallbacks ()
 
     }
     func initView() {
-        guard let viewModel = viewModel else {
-            return
-        }
        
+        viewModel.getvehicless(p1Lat: 54.02525603757394, p1Long: 8.891518406181133, p2Lat: 49.55909302528771, p2Long: 13.850246871254468)
        
-        mapView?.centerToLocation(initialLocation)
-      
-        let region = MKCoordinateRegion(
-          center: initialLocation.coordinate,
-          latitudinalMeters: 50000,
-          longitudinalMeters: 60000)
-        mapView?.setCameraBoundary(
-          MKMapView.CameraBoundary(coordinateRegion: region),
-          animated: true)
-        
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
-        mapView?.setCameraZoomRange(zoomRange, animated: true)
+       // mapView?.centerToLocation(initialLocation)
+       
+                let center = CLLocationCoordinate2D(latitude: initialLocation.coordinate.latitude, longitude: initialLocation.coordinate.longitude)
+        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        region.center = initialLocation.coordinate
+        mapView?.setRegion(region, animated: true)
+
         let marker = MyAnnotation(title: "" , subtitle: "" , coordinate: CLLocationCoordinate2D(latitude: initialLocation.coordinate.latitude, longitude: initialLocation.coordinate.longitude))
         self.mapView?.addAnnotations([marker])
         
     }
+    
+    
+    func createCallbacks (){
+      
+      viewModel.getVehicleResponse.subscribe(onNext: { [self] data in
+          print("data.poiList === > \(data.poiList)")
+          addAnnotations(cars :data.poiList ?? [])
+          if data.poiList!.count > 0  {
+             
+        }else{
+        }
+      }).disposed(by: disposeBag)
+      
+      
+    }
+    
     public func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         mapChangedFromUserInteraction = mapViewRegionDidChangeFromUserInteraction()
         if (mapChangedFromUserInteraction) {
@@ -71,8 +83,16 @@ public class MapViewController: UIViewController , MKMapViewDelegate {
     public func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         if (mapChangedFromUserInteraction) {
             let bounds = mapView.region.boundingBoxCoordinates
-                  print("TopLeft: \(bounds[0])\nTopRight: \(bounds[1])\nBottomRight: \(bounds[2])\nBottomLeft: \(bounds[3])")
-                 
+                 // print("TopLeft: \(bounds[0])\nTopRight: \(bounds[1])\nBottomRight: \(bounds[2])\nBottomLeft: \(bounds[3])")
+            viewModel.getvehicless(p1Lat:bounds[0].latitude, p1Long: bounds[0].longitude, p2Lat: bounds[2].latitude, p2Long: bounds[2].longitude)
+        }
+    }
+    func addAnnotations(cars :[PoiList])  {
+        let annotations = mapView!.annotations.filter({ !($0 is MKUserLocation) })
+        mapView?.removeAnnotations(annotations)
+        for veh in cars {
+            let marker = MyAnnotation(title: "" , subtitle: "" , coordinate: CLLocationCoordinate2D(latitude: veh.coordinate?.latitude ?? 0.0, longitude: veh.coordinate?.longitude ?? 0.0))
+            self.mapView?.addAnnotations([marker])
         }
     }
 }
