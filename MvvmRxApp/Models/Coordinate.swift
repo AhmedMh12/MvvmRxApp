@@ -13,7 +13,7 @@ struct Coordinate : Codable {
     let longitude : Double?
 
 
-    enum CodingKeys: String, CodingKey {
+   /* enum CodingKeys: String, CodingKey {
         case latitude = "latitude"
         case longitude = "longitude"
     }
@@ -22,6 +22,6 @@ struct Coordinate : Codable {
         latitude = try values.decodeIfPresent(Double.self, forKey: .latitude)
         longitude = try values.decodeIfPresent(Double.self, forKey: .longitude)
     }
-
+*/
 
 }

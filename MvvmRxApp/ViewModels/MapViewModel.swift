@@ -27,7 +27,9 @@ class MapViewModel{
     init(appServerClient: AppServerClient = AppServerClient()) {
         self.appServerClient = appServerClient
     }
-
+    
+    // MARK: Call Api
+    
     func getvehicless(p1Lat:Double,p1Long:Double,p2Lat:Double,p2Long:Double) {
         loadInProgress.accept(true)
 

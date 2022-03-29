@@ -16,7 +16,7 @@ struct PoiList : Codable {
     let type : String?
 
 
-    enum CodingKeys: String, CodingKey {
+   /* enum CodingKeys: String, CodingKey {
         case coordinate = "coordinate"
         case heading = "heading"
         case id = "id"
@@ -31,6 +31,6 @@ struct PoiList : Codable {
         state = try values.decodeIfPresent(String.self, forKey: .state)
         type = try values.decodeIfPresent(String.self, forKey: .type)
     }
-
+*/
 
 }

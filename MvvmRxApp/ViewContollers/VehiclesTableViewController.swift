@@ -29,6 +29,8 @@ public class VehiclesTableViewController: UIViewController {
         viewModel.getvehicless(p1Lat:53.694865,p1Long:9.757589,p2Lat:53.394655,p2Long:10.099891)
     }
 
+    // MARK: bindViewModel
+    
     func bindViewModel() {
         viewModel.vehicleCells.bind(to: self.tableView.rx.items) { tableView, index, element in
             let indexPath = IndexPath(item: index, section: 0)
@@ -65,11 +67,15 @@ public class VehiclesTableViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 
+    // MARK: setLoadingHud
+    
     private func setLoadingHud(visible: Bool) {
         PKHUD.sharedHUD.contentView = PKHUDSystemActivityIndicatorView()
         visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
     }
-
+    
+    // MARK: setupCellTapHandling
+    
     private func setupCellTapHandling() {
         tableView
             .rx
@@ -77,8 +83,7 @@ public class VehiclesTableViewController: UIViewController {
             .subscribe(
                 onNext: { [weak self] vehicleCellType in
                     if case let .normal(viewModel) = vehicleCellType {
-                        self?.selectFriendPayload = ReadOnce(viewModel)
-                        self?.performSegue(withIdentifier: "vehicleDetails", sender: self)
+                        // cell selection Action
                     }
                     if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
                         self?.tableView?.deselectRow(at: selectedRowIndexPath, animated: true)

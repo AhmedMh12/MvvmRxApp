@@ -15,6 +15,8 @@ enum VehiclesTableViewCellType {
 }
 
 class VehiclesTableViewViewModel {
+    let getVehicleResponse : PublishSubject<VehicleList> = PublishSubject()
+
     var vehicleCells: Observable<[VehiclesTableViewCellType]> {
         return cells.asObservable()
     }
@@ -35,6 +37,8 @@ class VehiclesTableViewViewModel {
         self.appServerClient = appServerClient
     }
 
+    // MARK: Call APi
+    
     func getvehicless(p1Lat:Double,p1Long:Double,p2Lat:Double,p2Long:Double) {
         loadInProgress.accept(true)
 
@@ -43,6 +47,7 @@ class VehiclesTableViewViewModel {
             .subscribe(
                 onNext: { [weak self] vehicles in
                     self?.loadInProgress.accept(false)
+                    self?.getVehicleResponse.onNext(vehicles)
                     guard vehicles.poiList!.count > 0 else {
                         self?.cells.accept([.empty])
                         return

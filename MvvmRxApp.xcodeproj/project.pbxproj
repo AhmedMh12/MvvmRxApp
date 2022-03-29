@@ -11,7 +11,6 @@
 		91E37FEB209C57009C256757 /* Pods_MvvmRxApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387C1D0AEA00C8408DCA0264 /* Pods_MvvmRxApp.framework */; };
 		CA676DB9A1F42ED9A2F59B7B /* Pods_MvvmRxApp_MvvmRxAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4617E92EB4DE1F546835C447 /* Pods_MvvmRxApp_MvvmRxAppUITests.framework */; };
 		FA91A02F27DB603D00438B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91A02E27DB603D00438B9B /* AppDelegate.swift */; };
-		FA91A03327DB603D00438B9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91A03227DB603D00438B9B /* ViewController.swift */; };
 		FA91A03627DB603D00438B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA91A03427DB603D00438B9B /* Main.storyboard */; };
 		FA91A03927DB603D00438B9B /* MvvmRxApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA91A03727DB603D00438B9B /* MvvmRxApp.xcdatamodeld */; };
 		FA91A03B27DB604000438B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA91A03A27DB604000438B9B /* Assets.xcassets */; };
@@ -71,6 +70,12 @@
 		FA986C9727EA2506004E1BEB /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9527EA2506004E1BEB /* MyAnnotation.swift */; };
 		FA986C9827EA2506004E1BEB /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA986C9527EA2506004E1BEB /* MyAnnotation.swift */; };
 		FA9B30B127F1D75300B7BF45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30B027F1D75300B7BF45 /* Extensions.swift */; };
+		FA9B30B427F306D000B7BF45 /* VehicleListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30B327F306D000B7BF45 /* VehicleListTests.swift */; };
+		FA9B30C627F31A5900B7BF45 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30C527F31A5900B7BF45 /* AlertTests.swift */; };
+		FA9B30C927F31BB500B7BF45 /* MockVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30C827F31BB500B7BF45 /* MockVehicle.swift */; };
+		FA9B30CC27F31FD300B7BF45 /* VehiclesTableViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30CB27F31FD300B7BF45 /* VehiclesTableViewViewModelTests.swift */; };
+		FA9B30CD27F3263700B7BF45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30B027F1D75300B7BF45 /* Extensions.swift */; };
+		FA9B30CE27F3263700B7BF45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B30B027F1D75300B7BF45 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +107,6 @@
 		F5A468B7DA2EA3C25D020D65 /* Pods-MvvmRxApp-MvvmRxAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmRxApp-MvvmRxAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MvvmRxApp-MvvmRxAppUITests/Pods-MvvmRxApp-MvvmRxAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA91A02B27DB603D00438B9B /* MvvmRxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvvmRxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA91A02E27DB603D00438B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA91A03227DB603D00438B9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA91A03527DB603D00438B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA91A03827DB603D00438B9B /* MvvmRxApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MvvmRxApp.xcdatamodel; sourceTree = "<group>"; };
 		FA91A03A27DB604000438B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,10 @@
 		FA986C9127EA1580004E1BEB /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		FA986C9527EA2506004E1BEB /* MyAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		FA9B30B027F1D75300B7BF45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA9B30B327F306D000B7BF45 /* VehicleListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListTests.swift; sourceTree = "<group>"; };
+		FA9B30C527F31A5900B7BF45 /* AlertTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
+		FA9B30C827F31BB500B7BF45 /* MockVehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVehicle.swift; sourceTree = "<group>"; };
+		FA9B30CB27F31FD300B7BF45 /* VehiclesTableViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTableViewViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +225,6 @@
 				FA986C7B27E9D357004E1BEB /* ViewContollers */,
 				FA986B8F27E74F46004E1BEB /* ViewModels */,
 				FA91A02E27DB603D00438B9B /* AppDelegate.swift */,
-				FA91A03227DB603D00438B9B /* ViewController.swift */,
 				FA91A03427DB603D00438B9B /* Main.storyboard */,
 				FA91A03A27DB604000438B9B /* Assets.xcassets */,
 				FA91A03C27DB604000438B9B /* LaunchScreen.storyboard */,
@@ -230,6 +237,10 @@
 		FA91A04727DB604100438B9B /* MvvmRxAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA9B30CA27F31FA500B7BF45 /* ViewModel */,
+				FA9B30C727F31B9B00B7BF45 /* Mock */,
+				FA9B30C427F31A4F00B7BF45 /* Helpers */,
+				FA9B30B227F304D400B7BF45 /* Model */,
 				FA91A04827DB604100438B9B /* MvvmRxAppTests.swift */,
 			);
 			path = MvvmRxAppTests;
@@ -309,6 +320,38 @@
 				FA986C8227E9E464004E1BEB /* VehiclesTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA9B30B227F304D400B7BF45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B30B327F306D000B7BF45 /* VehicleListTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA9B30C427F31A4F00B7BF45 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B30C527F31A5900B7BF45 /* AlertTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA9B30C727F31B9B00B7BF45 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B30C827F31BB500B7BF45 /* MockVehicle.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		FA9B30CA27F31FA500B7BF45 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B30CB27F31FD300B7BF45 /* VehiclesTableViewViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,7 +621,6 @@
 				FA986B9527E7513E004E1BEB /* VehiclesTableViewViewModel.swift in Sources */,
 				FA986C7D27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */,
 				FA986C4727E7529E004E1BEB /* ReadOnce.swift in Sources */,
-				FA91A03327DB603D00438B9B /* ViewController.swift in Sources */,
 				FA986C4427E7529E004E1BEB /* Alert.swift in Sources */,
 				FA91A02F27DB603D00438B9B /* AppDelegate.swift in Sources */,
 				FA986C4E27E754BC004E1BEB /* AppServerClient.swift in Sources */,
@@ -600,21 +642,26 @@
 			files = (
 				FA986C8427E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */,
 				FA986C4227E7529E004E1BEB /* Result.swift in Sources */,
+				FA9B30C927F31BB500B7BF45 /* MockVehicle.swift in Sources */,
 				FA986B9627E7513E004E1BEB /* VehiclesTableViewViewModel.swift in Sources */,
 				FA986B8527E48DEB004E1BEB /* VehicleList.swift in Sources */,
 				FA91A04927DB604100438B9B /* MvvmRxAppTests.swift in Sources */,
 				FA986C7E27E9E380004E1BEB /* VehiclesTableViewController.swift in Sources */,
 				FA986B9227E74FAA004E1BEB /* VehiclesCellViewModel.swift in Sources */,
 				FA986C9327EA1580004E1BEB /* MapViewModel.swift in Sources */,
+				FA9B30CD27F3263700B7BF45 /* Extensions.swift in Sources */,
 				FA986B8927E48E15004E1BEB /* PoiList.swift in Sources */,
 				FA986C3C27E7529E004E1BEB /* UIViewControllerExtension.swift in Sources */,
 				FA986C9727EA2506004E1BEB /* MyAnnotation.swift in Sources */,
 				FA986B8D27E48E37004E1BEB /* Coordinate.swift in Sources */,
 				FA986C4527E7529E004E1BEB /* Alert.swift in Sources */,
 				FA986C4827E7529E004E1BEB /* ReadOnce.swift in Sources */,
+				FA9B30CC27F31FD300B7BF45 /* VehiclesTableViewViewModelTests.swift in Sources */,
 				FA986C3F27E7529E004E1BEB /* JSON.swift in Sources */,
 				FA986C8B27EA0EFC004E1BEB /* MapViewController.swift in Sources */,
+				FA9B30B427F306D000B7BF45 /* VehicleListTests.swift in Sources */,
 				FA986C4F27E754BC004E1BEB /* AppServerClient.swift in Sources */,
+				FA9B30C627F31A5900B7BF45 /* AlertTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +676,7 @@
 				FA986C4027E7529E004E1BEB /* JSON.swift in Sources */,
 				FA986C8527E9E464004E1BEB /* VehiclesTableViewCell.swift in Sources */,
 				FA986B9327E74FAA004E1BEB /* VehiclesCellViewModel.swift in Sources */,
+				FA9B30CE27F3263700B7BF45 /* Extensions.swift in Sources */,
 				FA986C3D27E7529E004E1BEB /* UIViewControllerExtension.swift in Sources */,
 				FA986C4927E7529E004E1BEB /* ReadOnce.swift in Sources */,
 				FA986C5027E754BC004E1BEB /* AppServerClient.swift in Sources */,
@@ -810,6 +858,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -839,6 +888,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
